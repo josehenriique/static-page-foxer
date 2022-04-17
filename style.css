@@ -26,6 +26,9 @@ body{
   width: 100vw;
   background-color: #111111;
   background-image: url("./assets/grid.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main{
@@ -66,32 +69,53 @@ main{
 
 .light_down{
   position: fixed;
-  width: 784px;
-  height: 758px;
+  width: 50vw; /*784px*/
+  height: 70vh; /*758px*/
   border-radius: 50%;
 
-  left: 75%;
-  bottom: -60%;
+  left: 80vw;
+  bottom: -45vh;
 
   background: var(--light);
   mix-blend-mode: screen;
-  filter: blur(110px);
+  filter: blur(10vw); /*110px*/
 }
 
 .light_up{
   position: fixed;
-  width: 784px;
-  height: 758px;
+  width: 50vw; /*784px*/
+  height: 70vh; /*758px*/
   border-radius: 50%;
 
-  right: 75%;
-  top: -55%;
+  left: -30vw;
+  top: -40vh;
 
   background: var(--light);
   mix-blend-mode: screen;
   border: 1px solid #000000;
   box-sizing: border-box;
-  filter: blur(110px);
+  filter: blur(10vw); /*110px*/
+}
+
+@media (max-width: 1000px) {
+  .light_up{
+    width: 784px;
+    height: 758px;
+    filter: blur(110px);
+
+    left: -600px;
+    top: -450px;
+  }
+
+  .light_down{
+    width: 784px;
+    height: 758px;
+    filter: blur(110px);
+
+    /* left: 20; */
+    right: 600px;
+    bottom: -450px;
+  }
 }
 
 /* Textos */
